@@ -1,0 +1,52 @@
+It is challenging comming up with additional test cases as it is a bit unclear what feature is under test.  There are several areas or features that appear to be under test.
+  1. Search functionality - Ensuring the search bar is working and returning relevant results 
+  2. Quantity of items - Ensuring multiple items can be added to the cart
+  3. Search category/department functionality - ensuring all or specific departments are selectable and working as intended.
+  4. Compare feature - ensuring similar are displayed when using the compare with similar items feature.
+
+The following are just a few basic tests that could be added, with this site being so large and feature rich, there are many more I can think of to add.
+
+As a Customer, if I search for dog beds then I should see all results related to dog beds
+  1. Navigate to wwww.amazon.com
+  2. Enter dog beds into the search bar
+  3. Click search
+  4. Confirm all results are related to dog beds
+
+As a Customer, when I search for dog beds I should be able to filter by brand so that I can narrow the results down to a specific brand
+  1. Navigate to wwww.amazon.com
+  2. Enter dog beds into the search bar
+  3. Click search
+  4. Confirm brand filters are displayed
+  5. Select BEDSURE brand filter
+  6. Confirm only BEDSURE brand dog beds are displayed
+
+As a Customer, when I select a specific quantity of an item to add to the cart, then the correct ammount is added to the cart
+  1. Navigate to wwww.amazon.com
+  2. Enter dog beds into the search bar
+  3. Click search
+  4. Click on Amazon Basics Cooling Elevated Pet Bed, XS to XL Sizes
+  5. Change quantity to 2
+  6. Click add to cart
+  7. Confirm 2 Amazon Basics Cooling Elevated Pet Bed, XS to XL Sizes dog beds appear in the cart
+
+As a Customer, I should be able to select a department or category so that I can narrow my search
+  1. Navigate to wwww.amazon.com
+  2. Enter pants into the search bar
+  3. Select Men from the department dropdown under Clothing, Shoes $ Jewlery
+  4. Click search
+  5. Confirm only mens pants are displayed
+
+As a Customer, when I click compare similar items in my cart, I should see items related to what I have in my cart
+  1. Navigate to wwww.amazon.com
+  2. Enter dog beds into the search bar
+  3. Click search
+  4. Click on Amazon Basics Cooling Elevated Pet Bed, XS to XL Sizes
+  5. Change quantity to 2
+  6. Click add to cart   
+  7. Enter pants into the search bar
+  8. Select Men from the department dropdown under Clothing, Shoes & Jewlery
+  9. Click Amazon Essentials Men's Classic-Fit Stretch Golf Pant 
+  10. Ensure quantity is 1 and Click add to cart
+  11. Click Go to Cart
+  12. Click compare with similar items for the pants in the cart
+  13. Confirm only mens pants are displayed
