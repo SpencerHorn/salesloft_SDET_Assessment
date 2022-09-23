@@ -1,0 +1,21 @@
+Section A.1 (Automate)
+  Go to www.amazon.com
+  Enter “Magnifying Glass” into the search input field, and select the option “Industrial & Scientific” category from the search dropdown
+  Select Search
+  Verify the search bar and category selected for search are still populated
+  Select ‘Prime’ checkbox from filter menu
+  Verify all items listed for “Magnifying Glass” are for prime delivery only
+  Select a “Magnifying Glass” to purchase
+  Add QTY of '7' Magnifying Glass to cart
+  Verify ‘Added to Cart’ displays
+  Select ‘Cart’
+  Verify correct quantity of items is in cart
+  Select ‘Compare with similar items’
+  Verify pop up box of similar items displays
+  Close pop up box
+
+Section A.2 (Automate)
+  (IF ENTRY OR MID LVL) Write an additional test that will intentionally fail. Make sure there is context of how it failed.
+
+Section B (Manual)
+  Come up with additional test cases to consider automating. You don’t need to automate this part , write down the test cases, and how to go about testing.
