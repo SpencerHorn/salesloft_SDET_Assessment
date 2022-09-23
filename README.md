@@ -16,7 +16,7 @@ v18.9.0
 
 Clone repo down, and run cypress
 
-###### Using npx
+Using npx
 
 Note: npx is included with npm > v5.2 or can be installed separately.
 
