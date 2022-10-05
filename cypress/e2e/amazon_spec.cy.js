@@ -11,19 +11,19 @@ describe('Amazon search', () => {
 
   context("Search", () => {
 
-    it('As a user I should be able to search for and add 7 magnifying glasses to the cart so that I can view similar items', () => {
+    it.only('As a user I should be able to search for and add 7 magnifying glasses to the cart so that I can view similar items', () => {
       // Enter “Magnifying Glass” into the search input field
       homePage.search('Magnifying Glass')
-      //select the option “Industrial & Scientific” category from the search dropdown
+      // Select the option “Industrial & Scientific” category from the search dropdown
       homePage.selectDepartment('Industrial & Scientific')
       // Select Search
       homePage.clickSearch()
       // Verify the search bar and category selected for search are still populated
-      cy.get('select#searchDropdownBox option:selected').should('have.text', 'Industrial & Scientific')
+      homePage.validateDepartmentIsSelected('Industrial & Scientific')
       // Select Eligible for Free Shipping checkbox from filter menu
-      cy.get('input[type="checkbox"]').eq(0).check({ force: true })
+      homePage.toggleFreeShipping()
       // Select a “Magnifying Glass” to purchase
-      cy.get('[data-asin="B09TZSXT54"]').eq(0).click()
+      homePage.selectItem()
       // Add QTY of '7' Magnifying Glass to cart
       homePage.selectQuantity('7')
       // Click add to cart
@@ -47,16 +47,16 @@ describe('Amazon search', () => {
     it('As a user if I add less than 7 items to the cart, this test will fail', () => {
       // Enter “Magnifying Glass” into the search input field
       homePage.search('Magnifying Glass')
-      //select the option “Industrial & Scientific” category from the search dropdown
+      // Select the option “Industrial & Scientific” category from the search dropdown
       homePage.selectDepartment('Industrial & Scientific')
       // Select Search
       homePage.clickSearch()
       // Verify the search bar and category selected for search are still populated
-      cy.get('select#searchDropdownBox option:selected').should('have.text', 'Industrial & Scientific')
+      homePage.validateDepartmentIsSelected('Industrial & Scientific')
       // Select Eligible for Free Shipping checkbox from filter menu
-      cy.get('input[type="checkbox"]').eq(0).check({ force: true })
+      homePage.toggleFreeShipping()
       // Select a “Magnifying Glass” to purchase
-      cy.get('[data-asin="B09TZSXT54"]').eq(0).click()
+      homePage.selectItem()
       // Add QTY of '7' Magnifying Glass to cart
       homePage.selectQuantity('6')
       // Click add to cart
