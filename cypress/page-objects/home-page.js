@@ -48,49 +48,72 @@ export class HomePage {
       .contains(text)
   }
 
-  // cy.get('#sw-gtc > .a-button-inner > .a-button-text').click()
+  // Function to add item to cart
   clickCart() {
     cy
       .get('#sw-gtc > .a-button-inner > .a-button-text')
       .click()
   }
 
-  // cy.get('#sc-subtotal-label-activecart').contains('Subtotal (7 items):')
+  // Function to confirm all items were added to the cart
   validateQuantityInCart(text) {
     cy
       .get('#sc-subtotal-label-activecart')
       .contains(text)
   }
 
-  // cy.get('#comparison-lite-modal-B09TZSXT54').click()
+  // Function to click on compare similar items
   clickCompare() {
     cy
       .get('#comparison-lite-modal-B09TZSXT54')
       .click()
   }
 
-  // cy.get('#a-popover-content-2 > .a-size-large').contains('Compare with similar items')
+  // Function to check for text of Similar items modal
   validateModal(text) {
     cy
       .get('#a-popover-content-2 > .a-size-large')
       .contains(text)
   }
-  // cy.get('.comparable_item_scroller1 > :nth-child(4) > .a-size-base').contains('Magnifying Glass')
+  // Function to check item1 is related to the item in the cart
   validateModalItems1(text) {
     cy
       .get('.comparable_item_scroller1 > :nth-child(4) > .a-size-base')
       .contains(text)
   }
-  // cy.get('.comparable_item_scroller2 > :nth-child(4) > .a-size-base').contains('Magnifying Glass')
+  // Function to confirm item2 is related to the item in the cart
   validateModalItems2(text) {
     cy
       .get('.comparable_item_scroller2 > :nth-child(4) > .a-size-base')
       .contains(text)
   }
-  // cy.get('.a-button-close > .a-icon').click()
+  // Function to close compare items modal
   closeCompareItemsModal() {
     cy
       .get('.a-button-close > .a-icon')
+      .click()
+  }
+
+  // Function take one argument to confirm department is still selected
+  validateDepartmentIsSelected(department) {
+    cy
+      .get('select#searchDropdownBox option:selected')
+      .should('have.text', department)
+  }
+
+  // Function to click option to see items with free shipping only
+  toggleFreeShipping() {
+    cy
+      .get('input[type="checkbox"]')
+      .eq(0)
+      .check({ force: true })
+  }
+
+  // Function to select a “Magnifying Glass” to purchase
+  selectItem() {
+    cy
+      .get('[data-asin="B09TZSXT54"]')
+      .eq(0)
       .click()
   }
 }
