@@ -11,7 +11,7 @@ describe('Amazon search', () => {
 
   context("Search", () => {
 
-    it.only('As a user I should be able to search for and add 7 magnifying glasses to the cart so that I can view similar items', () => {
+    it('As a user I should be able to search for and add 7 magnifying glasses to the cart so that I can view similar items', () => {
       // Enter “Magnifying Glass” into the search input field
       homePage.search('Magnifying Glass')
       // Select the option “Industrial & Scientific” category from the search dropdown
